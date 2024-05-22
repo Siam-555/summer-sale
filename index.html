@@ -202,14 +202,28 @@
         </div>
       </div>
       <div class="cart">
-        <div class="coupon my-8 bg-white w-fit mx-auto h-fit p-4 rounded-lg shadow-md">
-          <p class="text-lg font-semibold mb-2">Have coupon?</p>
+        <div class="my-8 bg-white w-90 mx-auto h-fit p-4 rounded-lg shadow-md">
+          <p class="text-md font-semibold mb-2">Have coupon?</p>
           <div class="join">
-            <input class="input bg-fuchsia-200 input-bordered join-item" placeholder="Search" />
+            <input class="input bg-fuchsia-100 input-bordered join-item" placeholder="Search" />
             <button class="btn bg-fuchsia-500 border-0 text-white join-item">Apply</button>
           </div>
         </div>
-        <div class="coupon my-8 bg-white w-fit mx-auto h-fit p-4 rounded-lg shadow-md">
+        <div class="my-8 bg-white w-90 mx-auto h-fit p-4 rounded-lg shadow-md text-md font-semibold">
+          <div class="ordered-products">
+          </div>
+          <div class="order-cost">
+            <div class="orders-name">
+
+            </div>
+            <hr class="my-2">
+            <div class="orders-price pb-2">
+              <p>Total price: <span class="text-gray-400"><span id="total-price">0.00</span> TK</span></p>
+              <p>Discount: <span class="text-gray-400"><span id="discount">0.00</span> TK</span></p>
+              <p>Total: <span class="text-gray-400"><span id="total-payable">0.00</span> TK</span></p>
+            </div>
+            <button id="purchase-btn" class="bg-fuchsia-500 text-white p-2 -mb-9 block mx-auto rounded-md">Make Purchase</button>
+          </div>
         </div>
       </div>
     </div>
