@@ -25,11 +25,11 @@
   </header>
 
   <section class="w-4/5 mx-auto py-10">
-    <div class="grid gap-4" style="grid-template-columns: 3fr 1fr;">
-      <div class="products">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="col-span-2 products">
         <h3 class="py-6 mt-6 text-3xl font-bold">KitchenWare</h3>
-        <div class="grid grid-cols-3">
-          <div class="card w-11/12 mx-auto bg-white shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <div class="card w-60 md:w-11/12 mb-4 mx-auto bg-white shadow-lg">
             <figure class="px-4 pt-4">
               <div class="w-full bg-gray-200 bg rounded-xl">
                 <img class="mx-auto py-4" src="images/prod1.png" />
@@ -47,7 +47,7 @@
               <p class="opacity-60 font-semibold"><span>39.00</span> TK</p>
             </div>
           </div>
-          <div class="card w-11/12 mx-auto bg-white shadow-lg">
+          <div class="card w-60 md:w-11/12 mb-4 mx-auto bg-white shadow-lg">
             <figure class="px-4 pt-4">
               <div class="w-full bg-gray-200 bg rounded-xl">
                 <img class="mx-auto py-4" src="images/prod2.png" />
@@ -65,7 +65,7 @@
               <p class="opacity-60 font-semibold"><span>25.00</span> TK</p>
             </div>
           </div>
-          <div class="card w-11/12 mx-auto bg-white shadow-lg">
+          <div class="card w-60 md:w-11/12 mb-4 mx-auto bg-white shadow-lg">
             <figure class="px-4 pt-4">
               <div class="w-full bg-gray-200 bg rounded-xl">
                 <img class="mx-auto py-4" src="images/prod3.png" />
@@ -86,8 +86,8 @@
         </div>
 
         <h3 class="py-6 mt-6 text-3xl font-bold">SportsWare</h3>
-        <div class="grid grid-cols-3">
-          <div class="card w-11/12 mx-auto bg-white shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <div class="card w-60 md:w-11/12 mb-4 mx-auto bg-white shadow-lg">
             <figure class="px-4 pt-4">
               <div class="w-full bg-gray-200 bg rounded-xl">
                 <img class="mx-auto py-4" src="images/prod4.png" />
@@ -105,7 +105,7 @@
               <p class="opacity-60 font-semibold"><span>49.00</span> TK</p>
             </div>
           </div>
-          <div class="card w-11/12 mx-auto bg-white shadow-lg">
+          <div class="card w-60 md:w-11/12 mb-4 mx-auto bg-white shadow-lg">
             <figure class="px-4 pt-4">
               <div class="w-full bg-gray-200 bg rounded-xl">
                 <img class="mx-auto py-4" src="images/prod5.png" />
@@ -123,7 +123,7 @@
               <p class="opacity-60 font-semibold"><span>69.00</span> TK</p>
             </div>
           </div>
-          <div class="card w-11/12 mx-auto bg-white shadow-lg">
+          <div class="card w-60 md:w-11/12 mb-4 mx-auto bg-white shadow-lg">
             <figure class="px-4 pt-4">
               <div class="w-full bg-gray-200 bg rounded-xl">
                 <img class="mx-auto py-4" src="images/prod6.png" />
@@ -144,8 +144,8 @@
         </div>
 
         <h3 class="py-6 mt-6 text-3xl font-bold">Furniture</h3>
-        <div class="grid grid-cols-3">
-          <div class="card w-11/12 mx-auto bg-white shadow-lg">
+        <div class="grid grid-cols-1 md:grid-cols-3">
+          <div class="card w-60 md:w-11/12 mb-4 mx-auto bg-white shadow-lg">
             <figure class="px-4 pt-4">
               <div class="w-full bg-gray-200 bg rounded-xl">
                 <img class="mx-auto py-4" src="images/prod7.png" />
@@ -163,7 +163,7 @@
               <p class="opacity-60 font-semibold"><span>185.00</span> TK</p>
             </div>
           </div>
-          <div class="card w-11/12 mx-auto bg-white shadow-lg">
+          <div class="card w-60 md:w-11/12 mb-4 mx-auto bg-white shadow-lg">
             <figure class="px-4 pt-4">
               <div class="w-full bg-gray-200 bg rounded-xl">
                 <img class="mx-auto py-4" src="images/prod8.png" />
@@ -181,7 +181,7 @@
               <p class="opacity-60 font-semibold"><span>299.00</span> TK</p>
             </div>
           </div>
-          <div class="card w-11/12 mx-auto bg-white shadow-lg">
+          <div class="card w-60 md:w-11/12 mb-4 mx-auto bg-white shadow-lg">
             <figure class="px-4 pt-4">
               <div class="w-full bg-gray-200 bg rounded-xl">
                 <img class="mx-auto py-4" src="images/prod9.png" />
@@ -201,13 +201,15 @@
           </div>
         </div>
       </div>
-      <div class="cart bg-white w-fit h-fit m-8 mx-auto">
-        <div class="coupon p-6">
-          <p>Have coupon?</p>
+      <div class="cart">
+        <div class="coupon my-8 bg-white w-fit mx-auto h-fit p-4 rounded-lg shadow-md">
+          <p class="text-lg font-semibold mb-2">Have coupon?</p>
           <div class="join">
             <input class="input bg-fuchsia-200 input-bordered join-item" placeholder="Search" />
             <button class="btn bg-fuchsia-500 border-0 text-white join-item">Apply</button>
           </div>
+        </div>
+        <div class="coupon my-8 bg-white w-fit mx-auto h-fit p-4 rounded-lg shadow-md">
         </div>
       </div>
     </div>
