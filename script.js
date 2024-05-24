@@ -1,10 +1,16 @@
 // Add item to the cart
 function addToCart(name, price) {
-  console.log(name, price);
+  const li = document.createElement('li');
+  li.innerText = name;
+  console.log(li);
+  orderNamePlace[0].appendChild(li);
+  // orderNamePlace.appendChild(p);
 }
 
-// Added id to the clicked card and send to Cart
+// Collect details from clicked card and send to Cart
 const cards = document.querySelectorAll('.card');
+const orderNamePlace = document.getElementsByClassName('orders-name');
+
 for (const card of cards) {
   card.addEventListener('click', function() {
     const productName = card.querySelector('.product-name').innerText;
