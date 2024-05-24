@@ -1,7 +1,6 @@
 // Add item to the cart
 function addToCart(name, price) {
-  console.log(name, price)
-  document.querySelector('.ordered-products').appendChild = name;
+  console.log(name, price);
 }
 
 // Added id to the clicked card and send to Cart
