@@ -1,11 +1,15 @@
 // Add item to the cart
 function addToCart(name, price) {
-  console.log(document.getElementById(id));
+  console.log(name, price)
+  document.querySelector('.ordered-products').appendChild = name;
 }
 
 // Added id to the clicked card and send to Cart
-document.querySelector('.card').addEventListener('click', function() {
-  document.querySelector('.product-name').id = 'product-name';
-  document.querySelector('.product-price').id = 'product-price';
-  console.log(document.querySelector('.card'));
-})
+const cards = document.querySelectorAll('.card');
+for (const card of cards) {
+  card.addEventListener('click', function() {
+    const productName = card.querySelector('.product-name').innerText;
+    const productPrice = card.querySelector('.product-price').innerText;
+    addToCart(productName, productPrice);
+  })
+}
