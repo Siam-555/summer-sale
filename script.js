@@ -1,20 +1,48 @@
-// Add item to the cart
-function addToCart(name, price) {
-  const li = document.createElement('li');
-  li.innerText = name;
-  console.log(li);
-  orderNamePlace[0].appendChild(li);
-  // orderNamePlace.appendChild(p);
+let totalPrice = document.getElementById('total-price');
+let discount = document.getElementById('discount');
+let totalPayable = document.getElementById('total-payable');
+const ordersName = document.getElementById('orders-name');
+const purchaseBtn = document.getElementById('purchase-btn');
+const couponInput = document.getElementById('coupon-input');
+const couponButton = document.getElementById('coupon-button');
+
+
+const allCard = document.querySelectorAll('.card');
+for (const card of allCard) {
+  card.addEventListener('click', () => {
+    const itemName = card.querySelector('.product-name').innerText;
+    const itemPrice = card.querySelector('.product-price').innerText;
+    addToCart(itemName, itemPrice);
+  })
+};
+
+const addToCart = function (itemName, itemPrice) {
+  const productName = document.createElement('li');
+  productName.innerText = itemName;
+  ordersName.appendChild(productName);
+  totalPrice.innerText = parseFloat(totalPrice.innerText) + parseFloat(itemPrice);
+  totalPayable.innerText = totalPrice.innerText;
+  if (parseFloat(totalPrice.innerText) > 0) {
+    purchaseBtn.classList.remove('hidden');
+    purchaseBtn.classList.add('block');
+  }
 }
 
-// Collect details from clicked card and send to Cart
-const cards = document.querySelectorAll('.card');
-const orderNamePlace = document.getElementsByClassName('orders-name');
+const addDiscount = () => {
+  couponInput.addEventListener("keyup", () => {
+    if (parseFloat(totalPrice.innerText) > 200 && couponInput.value == "SELL200") {
+      couponButton.removeAttribute('disabled');
+      couponButton.addEventListener("click", () => {
+        totalPrice.innerText = parseFloat(totalPrice.innerText) - parseFloat(totalPrice.innerText) / 5;
+        discount.innerText = (parseFloat(totalPrice.innerText) / 5).toFixed(2);
 
-for (const card of cards) {
-  card.addEventListener('click', function() {
-    const productName = card.querySelector('.product-name').innerText;
-    const productPrice = card.querySelector('.product-price').innerText;
-    addToCart(productName, productPrice);
+        totalPayable.innerText = parseFloat(totalPrice.innerText) - (parseFloat(discount.innerText)).toFixed(2);
+        couponInput.value = "";
+      })
+    }
+    else {
+      couponButton.setAttribute('disabled', "")
+    }
   })
 }
+addDiscount();
